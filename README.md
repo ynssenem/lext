@@ -48,7 +48,7 @@ export default function App() {
 }
 ```
 
-```json
+```js
 module.exports = function (api) {
   api.cache(true)
   return {
