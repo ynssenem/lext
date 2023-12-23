@@ -20,9 +20,9 @@ After including Lext in your project, you can easily use the components. Here's 
 
 ```ts
 // ./index.ts
-import React from "react";
-import { ThemeProvider, createTheme } from "@ynssenem/lext";
-import IndexScreen from "./src/indexScreen";
+import React from "react"
+import { ThemeProvider, createTheme } from "@ynssenem/lext"
+import IndexScreen from "./src/indexScreen"
 
 export default function App() {
   const theme = createTheme({
@@ -38,17 +38,17 @@ export default function App() {
         global: "#000",
       },
     },
-  });
+  })
 
   return (
     <ThemeProvider theme={theme}>
       <IndexScreen />
     </ThemeProvider>
-  );
+  )
 }
 ```
 
-```json
+```js
 module.exports = function (api) {
   api.cache(true)
   return {
@@ -61,19 +61,17 @@ module.exports = function (api) {
 
 ```ts
 // ./src/indexScreen.ts
-import React from "react";
-import { Box, Button, SafeAreaView, useTheme } from "@ynssenem/lext";
+import React from "react"
+import { Box, Button, SafeAreaView, useTheme } from "@ynssenem/lext"
 
 const IndexScreen = () => {
-  const { colorScheme, setColorScheme } = useTheme();
+  const { colorScheme, setColorScheme } = useTheme()
 
   return (
     <SafeAreaView>
       <Box flex={1} justifyContent="center" gap={15} alignItems="center">
         <Button
-          onPress={() =>
-            setColorScheme((prev) => (prev == "lighten" ? "darken" : "lighten"))
-          }
+          onPress={() => setColorScheme((prev) => (prev == "lighten" ? "darken" : "lighten"))}
           backgroundColor="primary"
           variant="filled"
         >
@@ -81,10 +79,10 @@ const IndexScreen = () => {
         </Button>
       </Box>
     </SafeAreaView>
-  );
-};
+  )
+}
 
-export default IndexScreen;
+export default IndexScreen
 ```
 
 For more examples and usage details, you can check our [Documentation](docs/) page.
