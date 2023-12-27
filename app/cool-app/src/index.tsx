@@ -1,4 +1,14 @@
-import { Box, Button, MaskInput, Menu, SafeAreaView, Text, useTheme } from "@ynssenem/lext"
+import {
+  ArrowLeft,
+  Box,
+  Button,
+  MaskInput,
+  Menu,
+  SafeAreaView,
+  Text,
+  TextInput,
+  useTheme,
+} from "@ynssenem/lext"
 import { useState } from "react"
 
 const IndexScreen = () => {
@@ -42,6 +52,11 @@ const IndexScreen = () => {
         >
           <Button size="sm">Hello World</Button>
         </Menu>
+      </Box>
+      <ArrowLeft color={"#000"} />
+
+      <Box>
+        <TextInput placeholder="Hes" />
       </Box>
     </SafeAreaView>
   )
